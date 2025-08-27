@@ -22,8 +22,6 @@ def run_analysis(input_path: str, output_path: str):
 
     station_temperatures = read_csv_files(input_path, DELIMITER, SEASON_MONTHS_MASKS)
 
-    print(station_temperatures["23090"])
-
     seasonal_averages = get_seasonal_average(seasons, station_temperatures)
     temperature_range = get_temperature_range(station_temperatures)
     temperature_stability = get_station_temperature_stability(station_temperatures)
